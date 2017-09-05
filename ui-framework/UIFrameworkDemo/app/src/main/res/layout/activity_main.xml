@@ -1,17 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android = "http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android = "http://schemas.android.com/apk/res/android"
                                              xmlns:tools = "http://schemas.android.com/tools"
-                                             xmlns:app = "http://schemas.android.com/apk/res-auto"
                                              android:layout_width = "match_parent"
-                                             android:layout_height = "match_parent"
-                                             tools:context = "com.xbm.android.MainActivity">
+             android:id="@+id/root_view"
+             android:layout_height = "match_parent">
 
-	<TextView android:layout_width = "wrap_content"
-	          android:layout_height = "wrap_content"
-	          android:text = "Hello World!"
-	          app:layout_constraintBottom_toBottomOf = "parent"
-	          app:layout_constraintLeft_toLeftOf = "parent"
-	          app:layout_constraintRight_toRightOf = "parent"
-	          app:layout_constraintTop_toTopOf = "parent" />
+	<SurfaceView
+			android:id="@+id/sv_video"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:layout_gravity="center"/>
+	<LinearLayout android:layout_width = "wrap_content"
+	              android:layout_height = "wrap_content">
+		<Button
+				android:id="@+id/tui_btn"
+				android:layout_width = "wrap_content"
+		        android:layout_height = "wrap_content"
+		android:text="快退"/>
+		<Button
+				android:id="@+id/jin_btn"
+				android:layout_width = "wrap_content"
+		        android:layout_height = "wrap_content"
+		        android:text="快进"/>
+		<Button
+				android:id="@+id/pause_btn"
+				android:layout_width = "wrap_content"
+				android:layout_height = "wrap_content"
+				android:text="暂停"/>
+		<Button
+				android:id="@+id/start_btn"
+				android:layout_width = "wrap_content"
+				android:layout_height = "wrap_content"
+				android:text="播放"/>
+		<TextView
+				android:id="@+id/duration_txt"
+				android:layout_width = "wrap_content"
+				android:layout_marginLeft="20dp"
+		          android:layout_height = "wrap_content"
+		android:textColor="@android:color/white"/>
+	</LinearLayout>
 
-</android.support.constraint.ConstraintLayout>
+</FrameLayout>
