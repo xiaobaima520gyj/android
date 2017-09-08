@@ -7,5 +7,6 @@ package com.xbm.android.demo.utils;
 public class Contact {
 	public static final int XbmPlayerFragment = 0;
 	public static final int SkidMenuActivity = 1;
+	public static final int SwipeMenuFragment = 2;
 
 }

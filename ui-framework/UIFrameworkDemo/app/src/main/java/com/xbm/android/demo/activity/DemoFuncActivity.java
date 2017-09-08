@@ -8,6 +8,9 @@ import com.xbm.android.demo.R;
 import com.xbm.android.demo.fragment.XbmPlayerFragment;
 import com.xbm.android.demo.utils.Contact;
 
+import static com.xbm.android.demo.utils.Contact.SwipeMenuFragment;
+import com.xbm.android.demo.fragment.SwipeMenuFragment;
+
 /**
  * Created by xiaobaima on 17-9-5.
  */
@@ -31,6 +34,9 @@ public class DemoFuncActivity extends AppCompatActivity {
 				startActivity(new Intent(DemoFuncActivity.this, SkidMenuActivity.class));
 				finish();
 				return;
+			case SwipeMenuFragment:
+				fragmentTransaction.replace(R.id.demo_content, new SwipeMenuFragment());
+				break;
 		}
 
 		fragmentTransaction.commit();

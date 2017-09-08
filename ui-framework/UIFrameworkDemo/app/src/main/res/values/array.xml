@@ -3,5 +3,6 @@
     <string-array name="ui_demo_func_list">
         <item>XbmPlayerFragment</item>
         <item>SkidMenuActivity</item>
+        <item>SwipeMenuFragment</item>
     </string-array>
 </resources>
