@@ -2,5 +2,6 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string-array name="ui_demo_func_list">
         <item>XbmPlayerFragment</item>
+        <item>SkidMenuActivity</item>
     </string-array>
 </resources>

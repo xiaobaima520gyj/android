@@ -1,6 +1,7 @@
 package com.xbm.android.demo.activity;
 
 import android.app.FragmentTransaction;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import com.xbm.android.demo.R;
@@ -26,6 +27,10 @@ public class DemoFuncActivity extends AppCompatActivity {
 			case Contact.XbmPlayerFragment:
 			fragmentTransaction.replace(R.id.demo_content, new XbmPlayerFragment());
 			break;
+			case Contact.SkidMenuActivity:
+				startActivity(new Intent(DemoFuncActivity.this, SkidMenuActivity.class));
+				finish();
+				return;
 		}
 
 		fragmentTransaction.commit();
