@@ -3,3 +3,4 @@
 
 - [视频点播文档说明](https://github.com/xiaobaima520gyj/android/blob/master/ui-framework/doc/media.md)
 - [侧滑菜单说明](https://github.com/xiaobaima520gyj/android/blob/master/ui-framework/doc/skidmenu.md)
+- [列表项的侧滑菜单与标题栏停靠](https://github.com/xiaobaima520gyj/android/blob/master/ui-framework/doc/swipemenu.md)
