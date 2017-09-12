@@ -1,28 +1,25 @@
 package com.xbm.android.demo.fragment;
 
 import android.app.Fragment;
-import android.graphics.Color;
+import android.content.Intent;
+import android.graphics.Rect;
 import android.os.Build.VERSION_CODES;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.annotation.RequiresApi;
-import android.support.v4.content.ContextCompat;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.*;
 import android.view.LayoutInflater;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
-import android.widget.Toast;
 import com.xbm.android.demo.R;
-import com.xbm.android.demo.view.OnItemClickListener;
-import com.yanzhenjie.recyclerview.swipe.*;
-import com.yanzhenjie.recyclerview.swipe.widget.DefaultItemDecoration;
+import com.xbm.android.demo.activity.RefreshLoadMoreActivity;
+import com.xbm.android.demo.activity.menu.*;
+import com.xbm.android.demo.activity.move.*;
+import com.xbm.android.demo.adapter.MainItemAdapter;
+import com.xbm.android.demo.adapter.OnItemClickListener;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
+import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -30,16 +27,15 @@ import java.util.List;
  * Created by xiaobaima on 17-9-8.
  */
 
-public class SwipeMenuFragment extends Fragment {
+public class SwipeMenuFragment extends Fragment implements OnItemClickListener {
 
-	private SwipeMenuRecyclerView mSwipeMenuRecyclerView;
-	private List<String> mDataList;
-
+	private AppCompatActivity mCompatActivity;
 	@RequiresApi(api = VERSION_CODES.M)
 	@Nullable
 	@Override
 	public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container,
 		@Nullable Bundle savedInstanceState) {
+		mCompatActivity = (AppCompatActivity) getActivity();
 		View view = inflater.inflate(R.layout.swipe_menu_fragment, container, false);
 		initView(view);
 		initData();
@@ -47,149 +43,86 @@ public class SwipeMenuFragment extends Fragment {
 	}
 
 	private void initData() {
-		GroupAdapter adapter = new GroupAdapter();
-		mSwipeMenuRecyclerView.setAdapter(adapter);
-		adapter.setListItems(getItemList());
 	}
 
 
 	@RequiresApi(api = VERSION_CODES.M)
 	private void initView(View view) {
-		mSwipeMenuRecyclerView = (SwipeMenuRecyclerView) view.findViewById(R.id.recycler_view);
-		//是否开启嵌套
-		mSwipeMenuRecyclerView.setNestedScrollingEnabled(false);
-		mSwipeMenuRecyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
-		mSwipeMenuRecyclerView.addItemDecoration(new DefaultItemDecoration(ContextCompat.getColor(getActivity(), R.color.divider_color)));
-		mSwipeMenuRecyclerView.setSwipeMenuCreator(mSwipeMenuCreator);
+		Toolbar toolbar = (Toolbar) view.findViewById(R.id.toolbar);
+		mCompatActivity.setSupportActionBar(toolbar);
+
+		RecyclerView recyclerView = (RecyclerView) view.findViewById(R.id.recycler_view);
+		recyclerView.setLayoutManager(new StaggeredGridLayoutManager(2, LinearLayoutManager.VERTICAL));
+		recyclerView.setItemAnimator(new DefaultItemAnimator());
+		recyclerView.addItemDecoration(new RecyclerView.ItemDecoration() {
+			@Override
+			public void getItemOffsets(Rect outRect, View view, RecyclerView parent, RecyclerView.State state) {
+				outRect.set(10, 10, 10, 15);
+			}
+		});
+
+		List<String> titles = Arrays.asList(getResources().getStringArray(R.array.main_item));
+		List<String> descriptions = Arrays.asList(getResources().getStringArray(R.array.main_item_des));
+		MainItemAdapter mainItemAdapter = new MainItemAdapter(titles, descriptions);
+		mainItemAdapter.setOnItemClickListener(this);
+		recyclerView.setAdapter(mainItemAdapter);
 	}
-	/**
-	 * 菜单创建器。
-	 */
-	private SwipeMenuCreator mSwipeMenuCreator = new SwipeMenuCreator() {
-		@Override
-		public void onCreateMenu(SwipeMenu swipeLeftMenu, SwipeMenu swipeRightMenu, int viewType) {
-			if (viewType == GroupAdapter.VIEW_TYPE_NON_STICKY) {
-				int width = getResources().getDimensionPixelSize(R.dimen.dp_70);
 
-				// 1. MATCH_PARENT 自适应高度，保持和Item一样高;
-				// 2. 指定具体的高，比如80;
-				// 3. WRAP_CONTENT，自身高度，不推荐;
-				int height = ViewGroup.LayoutParams.MATCH_PARENT;
-
-				SwipeMenuItem closeItem = new SwipeMenuItem(getActivity())
-					.setBackground(R.drawable.selector_purple)
-					.setImage(R.mipmap.ic_action_close)
-					.setWidth(width)
-					.setHeight(height);
-				swipeLeftMenu.addMenuItem(closeItem); // 添加菜单到左侧。
-				swipeRightMenu.addMenuItem(closeItem); // 添加菜单到右侧。
-
-				SwipeMenuItem addItem = new SwipeMenuItem(getActivity())
-					.setBackground(R.drawable.selector_green)
-					.setText("添加")
-					.setTextColor(Color.WHITE)
-					.setWidth(width)
-					.setHeight(height);
-				swipeLeftMenu.addMenuItem(addItem); // 添加菜单到左侧。
-				swipeRightMenu.addMenuItem(addItem); // 添加菜单到右侧。
+	@Override
+	public void onItemClick(int position) {
+		switch (position) {
+			case 0: {
+				startActivity(new Intent(getActivity(), MenuHorizontalActivity.class));
+				break;
+			}
+			case 1: {
+				startActivity(new Intent(getActivity(), MenuVerticalActivity.class));
+				break;
+			}
+			case 2: {
+				startActivity(new Intent(getActivity(), MenuViewTypeActivity.class));
+				break;
+			}
+			case 3: {
+				startActivity(new Intent(getActivity(), MenuViewPagerActivity.class));
+				break;
+			}
+			case 4: {
+				startActivity(new Intent(getActivity(), MenuDrawerActivity.class));
+				break;
+			}
+			case 5: {
+				startActivity(new Intent(getActivity(), MenuCardActivity.class));
+				break;
+			}
+			case 6: {
+				startActivity(new Intent(getActivity(), MenuDefineActivity.class));
+				break;
+			}
+			case 7: {
+				startActivity(new Intent(getActivity(), RefreshLoadMoreActivity.class));
+				break;
+			}
+			case 8: {
+				startActivity(new Intent(getActivity(), DragListMenuActivity.class));
+				break;
+			}
+			case 9: {
+				startActivity(new Intent(getActivity(), DragGridMenuActivity.class));
+				break;
+			}
+			case 10: {
+				startActivity(new Intent(getActivity(), DragTouchListActivity.class));
+				break;
+			}
+			case 11: {
+				startActivity(new Intent(getActivity(), DragSwipeListActivity.class));
+				break;
+			}
+			case 12: {
+				startActivity(new Intent(getActivity(), DragSwipeFlagsActivity.class));
+				break;
 			}
 		}
-	};
-
-	private static class GroupAdapter extends RecyclerView.Adapter<GroupViewHolder> {
-
-		static final int VIEW_TYPE_NON_STICKY = R.layout.item_menu_main;
-		static final int VIEW_TYPE_STICKY = R.layout.item_menu_sticky;
-
-		private List<ListItem> mListItems = new ArrayList<>();
-
-		@Override
-		public GroupViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-			LayoutInflater inflater = LayoutInflater.from(parent.getContext());
-			View view = inflater.inflate(viewType, parent, false);
-			return new GroupViewHolder(view);
-		}
-
-		@Override
-		public void onBindViewHolder(GroupViewHolder holder, int position) {
-			holder.bind(mListItems.get(position));
-		}
-
-		@Override
-		public int getItemViewType(int position) {
-			if (mListItems.get(position) instanceof StickyListItem) {
-				return VIEW_TYPE_STICKY;
-			}
-			return VIEW_TYPE_NON_STICKY;
-		}
-
-		@Override
-		public int getItemCount() {
-			return mListItems.size();
-		}
-
-		void setListItems(List<String> newItems) {
-			mListItems.clear();
-			for (String item : newItems) {
-				mListItems.add(new ListItem(item));
-			}
-
-			Collections.sort(mListItems, new Comparator<ListItem>() {
-				@Override
-				public int compare(ListItem o1, ListItem o2) {
-					return o1.text.compareToIgnoreCase(o2.text);
-				}
-			});
-
-			StickyListItem stickyListItem = null;
-			for (int i = 0, size = mListItems.size(); i < size; i++) {
-				ListItem listItem = mListItems.get(i);
-				String firstLetter = String.valueOf(listItem.text.charAt(1));
-				if (stickyListItem == null || !stickyListItem.text.equals(firstLetter)) {
-					stickyListItem = new StickyListItem(firstLetter);
-					mListItems.add(i, stickyListItem);
-					size += 1;
-				}
-			}
-			notifyDataSetChanged();
-		}
 	}
-
-	private static class GroupViewHolder extends RecyclerView.ViewHolder {
-
-		private TextView text;
-
-		GroupViewHolder(View itemView) {
-			super(itemView);
-			text = (TextView) itemView.findViewById(R.id.tv_title);
-		}
-
-		void bind(ListItem item) {
-			text.setText(item.text);
-		}
-	}
-
-	private static class ListItem {
-
-		protected String text;
-
-		ListItem(String text) {
-			this.text = text;
-		}
-	}
-
-	private static class StickyListItem extends ListItem {
-		StickyListItem(String text) {
-			super(text);
-		}
-	}
-
-	protected List<String> getItemList() {
-		List<String> strings = new ArrayList<>();
-		for (int i = 0; i < 100; i++) {
-			strings.add("第" + i + "个Item");
-		}
-		return strings;
-	}
-
 }
