@@ -6,7 +6,8 @@
 	             android:label = "@string/app_name"
 	             android:roundIcon = "@mipmap/ic_launcher_round"
 	             android:supportsRtl = "true"
-	             android:theme = "@style/AppTheme">
+	             android:theme = "@style/AppTheme"
+	             android:name=".CustomApplication">
 		<activity android:name = ".MainActivity">
 			<intent-filter>
 				<action android:name = "android.intent.action.MAIN" />
@@ -56,6 +57,8 @@
 				android:name=".activity.move.DragSwipeFlagsActivity"
 				android:label="自定义拖拽参数"/>
 		<activity android:name = ".activity.BottomBarActivity"/>
+		<activity android:name = ".activity.swipe.SwipeBackTestActivity"/>
+		<activity android:name = ".activity.swipe.SwipeActivity"/>
 	</application>
 
 </manifest>

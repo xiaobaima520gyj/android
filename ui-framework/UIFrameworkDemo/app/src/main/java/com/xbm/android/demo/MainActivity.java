@@ -11,6 +11,9 @@ import android.widget.ListView;
 import com.xbm.android.demo.activity.DemoFuncActivity;
 
 import static com.xbm.android.demo.utils.Contact.BottomBarActivity;
+import static com.xbm.android.demo.utils.Contact.SwipeBackTestActivity;
+import  com.xbm.android.demo.activity.swipe.SwipeBackTestActivity;
+
 import com.xbm.android.demo.activity.BottomBarActivity;
 
 public class MainActivity extends AppCompatActivity implements OnItemClickListener{
@@ -33,6 +36,8 @@ public class MainActivity extends AppCompatActivity implements OnItemClickListen
 		intent.putExtra("position", position);
 		if (position == BottomBarActivity){
 			intent.setClass(MainActivity.this, BottomBarActivity.class);
+		}else if (position == SwipeBackTestActivity){
+			intent.setClass(MainActivity.this, SwipeBackTestActivity.class);
 		}else {
 			intent.setClass(MainActivity.this, DemoFuncActivity.class);
 		}

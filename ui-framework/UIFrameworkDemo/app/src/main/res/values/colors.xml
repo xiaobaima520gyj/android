@@ -17,4 +17,5 @@
 	<color name="test">#489</color>
 	<color name="green">#46c01b</color>
 	<color name="greenDark">#40a00a</color>
+	<color name="while_pressed">#eeeeee</color>
 </resources>
