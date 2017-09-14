@@ -55,6 +55,7 @@
 		<activity
 				android:name=".activity.move.DragSwipeFlagsActivity"
 				android:label="自定义拖拽参数"/>
+		<activity android:name = ".activity.BottomBarActivity"/>
 	</application>
 
 </manifest>

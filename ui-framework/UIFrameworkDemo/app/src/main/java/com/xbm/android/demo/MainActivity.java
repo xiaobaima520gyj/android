@@ -10,6 +10,9 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import com.xbm.android.demo.activity.DemoFuncActivity;
 
+import static com.xbm.android.demo.utils.Contact.BottomBarActivity;
+import com.xbm.android.demo.activity.BottomBarActivity;
+
 public class MainActivity extends AppCompatActivity implements OnItemClickListener{
 
 
@@ -28,7 +31,11 @@ public class MainActivity extends AppCompatActivity implements OnItemClickListen
 	public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 		Intent intent = new Intent();
 		intent.putExtra("position", position);
-		intent.setClass(MainActivity.this, DemoFuncActivity.class);
+		if (position == BottomBarActivity){
+			intent.setClass(MainActivity.this, BottomBarActivity.class);
+		}else {
+			intent.setClass(MainActivity.this, DemoFuncActivity.class);
+		}
 		startActivity(intent);
 	}
 }
