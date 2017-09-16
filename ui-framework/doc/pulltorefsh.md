@@ -138,12 +138,14 @@ refreshLayout.setRefreshHeader(new MaterialHeader(this).setShowBezierWave(true))
 refreshLayout.setRefreshFooter(new BallPulseFooter(this).setSpinnerStyle(SpinnerStyle.Scale));
 ```
 
-## 效果
+## 部分效果图
 
 ![效果](https://github.com/xiaobaima520gyj/android/blob/master/ui-framework/dep-imgs/gif_practive_repast.gif)
 ![效果](https://github.com/xiaobaima520gyj/android/blob/master/ui-framework/dep-imgs/gif_practive_weibo.gif)
 ![效果](https://github.com/xiaobaima520gyj/android/blob/master/ui-framework/dep-imgs/gif_WaterDrop.gif)
 ![效果](https://github.com/xiaobaima520gyj/android/blob/master/ui-framework/dep-imgs/gif_WaveSwipe.gif)
+
+*注意：这里的效果图只是一部分，更多的效果可参见 https://github.com/scwang90/SmartRefreshLayout*
 
 ## License
 
