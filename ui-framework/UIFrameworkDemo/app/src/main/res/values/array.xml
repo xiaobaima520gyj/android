@@ -8,6 +8,7 @@
         <item>SwipeBackTestActivity</item>
         <item>PullToRefreshActivity</item>
         <item>BannerPracticeActivity</item>
+        <item>IndexBarFragment</item>
     </string-array>
 
     <string-array name="main_item">
