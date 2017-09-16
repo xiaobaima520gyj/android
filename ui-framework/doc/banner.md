@@ -152,9 +152,7 @@ protected void onStop() {
 
 ## 效果
 
-<video id="video" controls="" preload="none" >
-      <source id="mp4" src="https://github.com/xiaobaima520gyj/android/blob/master/ui-framework/dep-imgs/device-2017-09-16-141724.mp4" type="video/mp4">
-</video>
+<iframe width="560" height="315" src="https://github.com/xiaobaima520gyj/android/blob/master/ui-framework/dep-imgs/device-2017-09-16-141724.mp4" frameborder="0" allowfullscreen></iframe>
 
 ## 附加组件说明
 - [实现毛玻璃效果的组件](https://github.com/mmin18/RealtimeBlurView)
@@ -164,4 +162,6 @@ protected void onStop() {
 - [实现圆形图片的组件](https://github.com/hdodenhof/CircleImageView)
 
 - [recyclerview的适配封装](http://www.recyclerview.org/)  -- 这个已经将源代码加入到ui库里面了
+
+*注意：以上组件都已经引入到了ui库里面了，所以在用的时候直接用就可以了，无需再次引入*
 
