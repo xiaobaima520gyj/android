@@ -20,4 +20,7 @@
 	<color name="while_pressed">#eeeeee</color>
 	<color name="colorTextAssistant">#888888</color>
 	<color name="colorBackgroudDark">#f2f2f2</color>
+	<color name = "colorTextContent">#444444</color>
+	<color name = "colorTextTitle">#333333</color>
+	<color name="colorPrimaryOverlay">#cc0094ff</color>
 </resources>

@@ -35,6 +35,5 @@ dependencies {
     compile 'com.android.support:cardview-v7:25.2.0'
     compile 'com.android.support:design:25.2.0'
     compile project(':xbmuifklib')
-    compile 'pl.droidsonroids.gif:android-gif-drawable:1.2.3'
-    compile 'com.github.mmin18:realtimeblurview:1.0.6'
+    compile 'com.google.code.gson:gson:2.7'
 }

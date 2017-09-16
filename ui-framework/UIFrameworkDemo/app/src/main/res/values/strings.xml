@@ -48,4 +48,6 @@
 	<string name = "title_activity_style_water_drop">苹果水滴</string>
 	<string name = "title_activity_style_wave_swip">全屏水波</string>
 	<string name = "title_activity_practice_repast">餐饮美食</string>
+	<string name="title_activity_practice_banner">滚动广告</string>
+
 </resources>

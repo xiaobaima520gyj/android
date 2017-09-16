@@ -11,5 +11,6 @@ public class Contact {
 	public static final int BottomBarActivity = 3;
 	public static final int SwipeBackTestActivity = 4;
 	public static final int PullToRefreshActivity = 5;
+	public static final int BannerPracticeActivity = 6;
 
 }

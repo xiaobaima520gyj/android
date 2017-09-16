@@ -10,13 +10,13 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import com.xbm.android.demo.activity.DemoFuncActivity;
 
-import static com.xbm.android.demo.utils.Contact.BottomBarActivity;
-import static com.xbm.android.demo.utils.Contact.PullToRefreshActivity;
-import static com.xbm.android.demo.utils.Contact.SwipeBackTestActivity;
 import  com.xbm.android.demo.activity.swipe.SwipeBackTestActivity;
 
 import com.xbm.android.demo.activity.BottomBarActivity;
 import com.xbm.android.demo.activity.PullToRefreshActivity;
+import com.xbm.android.demo.activity.BannerPracticeActivity;
+
+import static com.xbm.android.demo.utils.Contact.*;
 
 public class MainActivity extends AppCompatActivity implements OnItemClickListener{
 
@@ -42,6 +42,8 @@ public class MainActivity extends AppCompatActivity implements OnItemClickListen
 			intent.setClass(MainActivity.this, SwipeBackTestActivity.class);
 		} else if (position == PullToRefreshActivity){
 			intent.setClass(MainActivity.this, PullToRefreshActivity.class);
+		}else if (position == BannerPracticeActivity){
+			intent.setClass(MainActivity.this, BannerPracticeActivity.class);
 		}else {
 			intent.setClass(MainActivity.this, DemoFuncActivity.class);
 		}
