@@ -152,7 +152,9 @@ protected void onStop() {
 
 ## 效果
 
+
 <iframe width="560" height="315" src="https://github.com/xiaobaima520gyj/android/blob/master/ui-framework/dep-imgs/device-2017-09-16-141724.mp4" frameborder="0" allowfullscreen></iframe>
+
 
 ## 附加组件说明
 - [实现毛玻璃效果的组件](https://github.com/mmin18/RealtimeBlurView)
