@@ -18,4 +18,6 @@
 	<color name="green">#46c01b</color>
 	<color name="greenDark">#40a00a</color>
 	<color name="while_pressed">#eeeeee</color>
+	<color name="colorTextAssistant">#888888</color>
+	<color name="colorBackgroudDark">#f2f2f2</color>
 </resources>

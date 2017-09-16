@@ -5,4 +5,7 @@
 	<dimen name="item_margin">10dp</dimen>
 	<dimen name = "dp_10">10dp</dimen>
 	<dimen name = "dp_70">70dp</dimen>
+	<dimen name = "padding_common">10dp</dimen>
+	<dimen name = "padding_common_d">5dp</dimen>
+	<dimen name = "padding_common_h">15dp</dimen>
 </resources>

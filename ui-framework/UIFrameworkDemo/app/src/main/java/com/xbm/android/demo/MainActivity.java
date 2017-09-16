@@ -11,10 +11,12 @@ import android.widget.ListView;
 import com.xbm.android.demo.activity.DemoFuncActivity;
 
 import static com.xbm.android.demo.utils.Contact.BottomBarActivity;
+import static com.xbm.android.demo.utils.Contact.PullToRefreshActivity;
 import static com.xbm.android.demo.utils.Contact.SwipeBackTestActivity;
 import  com.xbm.android.demo.activity.swipe.SwipeBackTestActivity;
 
 import com.xbm.android.demo.activity.BottomBarActivity;
+import com.xbm.android.demo.activity.PullToRefreshActivity;
 
 public class MainActivity extends AppCompatActivity implements OnItemClickListener{
 
@@ -38,6 +40,8 @@ public class MainActivity extends AppCompatActivity implements OnItemClickListen
 			intent.setClass(MainActivity.this, BottomBarActivity.class);
 		}else if (position == SwipeBackTestActivity){
 			intent.setClass(MainActivity.this, SwipeBackTestActivity.class);
+		} else if (position == PullToRefreshActivity){
+			intent.setClass(MainActivity.this, PullToRefreshActivity.class);
 		}else {
 			intent.setClass(MainActivity.this, DemoFuncActivity.class);
 		}

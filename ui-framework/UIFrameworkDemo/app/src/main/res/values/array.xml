@@ -6,6 +6,7 @@
         <item>SwipeMenuFragment</item>
         <item>BottomBarActivity</item>
         <item>SwipeBackTestActivity</item>
+        <item>PullToRefreshActivity</item>
     </string-array>
 
     <string-array name="main_item">

@@ -33,4 +33,7 @@ dependencies {
     compile 'com.yanzhenjie:recyclerview-swipe:1.0.4'
     compile 'com.chen.wakehao.library:bottom-navigation-bar:1.0.0'
     compile 'com.aitangba:swipeback:1.0.2'
+    compile 'com.scwang.smartrefresh:SmartRefreshLayout:1.0.3'
+    compile 'com.scwang.smartrefresh:SmartRefreshHeader:1.0.3'//没有使用特殊Header，可以不加这行
+    compile 'de.hdodenhof:circleimageview:2.1.0'
 }
