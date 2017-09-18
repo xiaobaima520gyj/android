@@ -13,5 +13,6 @@ public class Contact {
 	public static final int PullToRefreshActivity = 5;
 	public static final int BannerPracticeActivity = 6;
 	public static final int IndexBarFragment = 7;
+	public static final int ExpectMainActivity = 8;
 
 }

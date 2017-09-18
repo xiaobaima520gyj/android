@@ -61,6 +61,8 @@
 		<activity android:name = ".activity.swipe.SwipeActivity"/>
 		<activity android:name = ".activity.PullToRefreshActivity"/>
 		<activity android:name = ".activity.BannerPracticeActivity"/>
+		<activity android:name = ".ExpectMainActivity"/>
+		<activity android:name = ".activity.EfectTowActivity"/>
 	</application>
 
 </manifest>

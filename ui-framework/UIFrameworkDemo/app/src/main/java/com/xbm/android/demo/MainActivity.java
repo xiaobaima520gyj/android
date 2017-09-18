@@ -44,6 +44,8 @@ public class MainActivity extends AppCompatActivity implements OnItemClickListen
 			intent.setClass(MainActivity.this, PullToRefreshActivity.class);
 		}else if (position == BannerPracticeActivity){
 			intent.setClass(MainActivity.this, BannerPracticeActivity.class);
+		}else if(position == ExpectMainActivity){
+			intent.setClass(MainActivity.this, ExpectMainActivity.class);
 		}else {
 			intent.setClass(MainActivity.this, DemoFuncActivity.class);
 		}

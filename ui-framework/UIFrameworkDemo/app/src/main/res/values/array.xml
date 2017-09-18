@@ -9,6 +9,7 @@
         <item>PullToRefreshActivity</item>
         <item>BannerPracticeActivity</item>
         <item>IndexBarFragment</item>
+        <item>ExpectMainActivity</item>
     </string-array>
 
     <string-array name="main_item">
