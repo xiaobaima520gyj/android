@@ -10,3 +10,5 @@
 - [图片轮播组件](https://github.com/xiaobaima520gyj/android/blob/master/ui-framework/doc/banner.md)
 - [列表快速索引实现](https://github.com/xiaobaima520gyj/android/blob/master/ui-framework/doc/indexbar.md)
 - [组件移动动画](https://github.com/xiaobaima520gyj/android/blob/master/ui-framework/doc/expectanim.md)
+- [浮动按钮组件](https://github.com/xiaobaima520gyj/android/blob/master/ui-framework/doc/fltbtn.md)
+- [图片视频选择组件](https://github.com/xiaobaima520gyj/android/blob/master/ui-framework/doc/matisse.md)
