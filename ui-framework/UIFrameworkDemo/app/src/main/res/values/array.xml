@@ -10,6 +10,8 @@
         <item>BannerPracticeActivity</item>
         <item>IndexBarFragment</item>
         <item>ExpectMainActivity</item>
+        <item>FloatButtonFragment</item>
+        <item>MatisseFragment</item>
     </string-array>
 
     <string-array name="main_item">
@@ -27,7 +29,46 @@
         <item>拖拽+侧滑删除</item>
         <item>自定义拖拽/侧滑参数</item>
     </string-array>
-
+    <string-array name = "float_btn_list_test">
+        <item>小白马</item>
+        <item>清玄</item>
+        <item>小白马</item>
+        <item>清玄</item>
+        <item>小白马</item>
+        <item>清玄</item>
+        <item>小白马</item>
+        <item>清玄</item>
+        <item>小白马</item>
+        <item>清玄</item>
+        <item>小白马</item>
+        <item>清玄</item>
+        <item>小白马</item>
+        <item>清玄</item>
+        <item>小白马</item>
+        <item>清玄</item>
+        <item>小白马</item>
+        <item>清玄</item>
+        <item>小白马</item>
+        <item>清玄</item>
+        <item>小白马</item>
+        <item>清玄</item>
+        <item>小白马</item>
+        <item>清玄</item>
+        <item>小白马</item>
+        <item>清玄</item>
+        <item>小白马</item>
+        <item>清玄</item>
+        <item>小白马</item>
+        <item>清玄</item>
+        <item>小白马</item>
+        <item>清玄</item>
+        <item>小白马</item>
+        <item>清玄</item>
+        <item>小白马</item>
+        <item>清玄</item>
+        <item>小白马</item>
+        <item>清玄</item>
+    </string-array>
     <string-array name="main_item_des">
         <item>左右侧滑Item菜单，菜单的顺序是左右排布。</item>
         <item>左右侧滑Item菜单，菜单的顺序是上下排布。</item>

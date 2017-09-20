@@ -52,5 +52,8 @@
 	<string name = "effect1">效果1</string>
 	<string name = "effect2">效果2</string>
 	<string name = "effect3">效果3</string>
+	<string name="lorem_ipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
+		magna tortor, semper eu feugiat eu, vehicula vitae lacus.</string>
+	<string name = "permission_request_denied">需要相应的权限</string>
 
 </resources>

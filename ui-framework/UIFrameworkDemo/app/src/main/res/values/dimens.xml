@@ -11,5 +11,7 @@
 	<dimen name = "textsize_content">14sp</dimen>
 	<dimen name = "textsize_title">17sp</dimen>
 	<dimen name = "dimen_90dp">90dp</dimen>
+	<dimen name = "grid_expected_size">120dp</dimen>
+	<dimen name = "dimen_18sp">18sp</dimen>
 
 </resources>

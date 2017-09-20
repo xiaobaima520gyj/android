@@ -36,4 +36,6 @@ dependencies {
     compile 'com.android.support:design:25.2.0'
     compile project(':xbmuifklib')
     compile 'com.google.code.gson:gson:2.7'
+    compile 'com.tbruyelle.rxpermissions2:rxpermissions:0.9.1@aar'
+    compile 'io.reactivex.rxjava2:rxjava:2.0.5'
 }

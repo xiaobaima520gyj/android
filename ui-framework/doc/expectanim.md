@@ -68,7 +68,9 @@ new ExpectAnim()
 
 ## 效果
 
-![效果](https://github.com/xiaobaima520gyj/android/blob/master/ui-framework/dep-imgs/expect_anim.gif)
+![效果](https://github.com/xiaobaima520gyj/android/blob/master/ui-framework/dep-imgs/rotations.gif)
+![效果](https://github.com/xiaobaima520gyj/android/blob/master/ui-framework/dep-imgs/sample.gif)
+![效果](https://github.com/xiaobaima520gyj/android/blob/master/ui-framework/dep-imgs/scroll.gif)
 
 ## 附加说明
 
