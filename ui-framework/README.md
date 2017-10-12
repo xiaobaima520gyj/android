@@ -12,3 +12,5 @@
 - [组件移动动画](https://github.com/xiaobaima520gyj/android/blob/master/ui-framework/doc/expectanim.md)
 - [浮动按钮组件](https://github.com/xiaobaima520gyj/android/blob/master/ui-framework/doc/fltbtn.md)
 - [图片视频选择组件](https://github.com/xiaobaima520gyj/android/blob/master/ui-framework/doc/matisse.md)
+- [android实现转场动画的例子](https://github.com/xiaobaima520gyj/android/blob/master/ui-framework/doc/metia_transition.md)
+- [加载数据时候的布局占位示例](https://github.com/xiaobaima520gyj/android/blob/master/ui-framework/doc/fiftyshade.md)

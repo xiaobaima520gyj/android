@@ -13,5 +13,12 @@
 	<dimen name = "dimen_90dp">90dp</dimen>
 	<dimen name = "grid_expected_size">120dp</dimen>
 	<dimen name = "dimen_18sp">18sp</dimen>
-
+	<dimen name="elevation_header">4dp</dimen>
+	<integer name="anim_duration_very_long">1500</integer>
+	<integer name="anim_duration_long">500</integer>
+	<integer name="anim_duration_medium">300</integer>
+	<dimen name="spacing_double">16dp</dimen>
+	<dimen name="spacing_normal">8dp</dimen>
+	<dimen name="activity_horizontal_margin">16dp</dimen>
+	<dimen name="activity_vertical_margin">16dp</dimen>
 </resources>

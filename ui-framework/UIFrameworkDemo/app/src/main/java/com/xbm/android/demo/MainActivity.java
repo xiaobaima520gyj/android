@@ -46,6 +46,8 @@ public class MainActivity extends AppCompatActivity implements OnItemClickListen
 			intent.setClass(MainActivity.this, BannerPracticeActivity.class);
 		}else if(position == ExpectMainActivity){
 			intent.setClass(MainActivity.this, ExpectMainActivity.class);
+		}else if(position == Meteria_Animations){
+			intent.setClass(MainActivity.this, MeteriaAnimActivity.class);
 		}else {
 			intent.setClass(MainActivity.this, DemoFuncActivity.class);
 		}

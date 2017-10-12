@@ -63,6 +63,32 @@
 		<activity android:name = ".activity.BannerPracticeActivity"/>
 		<activity android:name = ".ExpectMainActivity"/>
 		<activity android:name = ".activity.EfectTowActivity"/>
+		<activity android:name = ".MeteriaAnimActivity"/>
+
+		<activity
+				android:name=".activity.anim.TransitionActivity1"
+				android:theme="@style/MaterialAnimations.Red" />
+		<activity
+				android:name=".activity.anim.TransitionActivity2"
+				android:theme="@style/MaterialAnimations.Red" />
+		<activity
+				android:name=".activity.anim.TransitionActivity3"
+				android:theme="@style/MaterialAnimations.Red" />
+		<activity
+				android:name=".activity.anim.SharedElementActivity"
+				android:theme="@style/MaterialAnimations.Blue" />
+
+		<activity
+				android:name=".activity.anim.AnimationsActivity1"
+				android:theme="@style/MaterialAnimations.Green" />
+
+		<activity
+				android:name=".activity.anim.AnimationsActivity2"
+				android:theme="@style/MaterialAnimations.Green" />
+
+		<activity
+				android:name=".activity.anim.RevealActivity"
+				android:theme="@style/MaterialAnimations.Yellow" />
 	</application>
 
 </manifest>

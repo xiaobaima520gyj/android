@@ -16,5 +16,7 @@ public class Contact {
 	public static final int ExpectMainActivity = 8;
 	public static final int FloatButtonFragment = 9;
 	public static final int MatisseFragment = 10;
+	public static final int Meteria_Animations = 11;
+	public static final int FiftyshadeFragment = 12;
 
 }

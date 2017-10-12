@@ -12,6 +12,8 @@
         <item>ExpectMainActivity</item>
         <item>FloatButtonFragment</item>
         <item>MatisseFragment</item>
+        <item>Meteria-Animations</item>
+        <item>FiftyshadeFragment</item>
     </string-array>
 
     <string-array name="main_item">

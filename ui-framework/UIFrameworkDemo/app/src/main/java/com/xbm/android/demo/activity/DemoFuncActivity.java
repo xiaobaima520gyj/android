@@ -14,6 +14,7 @@ import com.xbm.android.demo.fragment.SwipeMenuFragment;
 import com.xbm.android.demo.fragment.IndexBarFragment;
 import com.xbm.android.demo.fragment.FloatButtonFragment;
 import com.xbm.android.demo.fragment.MatisseFragment;
+import com.xbm.android.demo.fragment.FiftyshadeFragment;
 
 import static com.xbm.android.demo.utils.Contact.*;
 
@@ -53,6 +54,9 @@ public class DemoFuncActivity extends AppCompatActivity {
 			case MatisseFragment:
 				mFragment = new MatisseFragment();
 				fragmentTransaction.replace(R.id.demo_content, mFragment);
+				break;
+			case FiftyshadeFragment:
+				fragmentTransaction.replace(R.id.demo_content, new FiftyshadeFragment());
 				break;
 		}
 
